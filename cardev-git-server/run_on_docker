@@ -1,0 +1,15 @@
+#!/bin/sh
+
+d_user='tsubone'
+d_group='tsubone'
+
+image_name='cardev-git-server-env:0.1'
+
+docker run --rm -it \
+       -P \
+       -h cardev \
+       -v $HOME/work/agl-dev/modules/20180103:/home/GIT \
+       -e LANG=en_US.UTF-8 \
+       --net cardev_net --ip 10.229.224.31 \
+       -t $image_name 
+       

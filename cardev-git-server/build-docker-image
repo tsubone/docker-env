@@ -1,0 +1,7 @@
+#!/bin/sh
+
+image_name='cardev-git-server-env:0.1'
+
+echo "docker build -t $image_name"
+docker build -t $image_name .
+
